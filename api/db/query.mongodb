@@ -1,0 +1,67 @@
+use('db_campus_library');
+db.createCollection('users',{
+    validator:{
+        $jsonSchema:{
+            bsonType: "object",
+            required:["nombre","apellido","direccion","telefono","email","cedula"],
+            properties:{
+                nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
+                apellido:{bsonType:"string",description:"apellido debe ser string y es requerido"},
+                direccion:{bsonType:"string",description:"direccion debe ser string y es requerido"},
+                telefono:{bsonType:"string", description:"telefono debe ser string y es requerido"},
+                email:{bsonType:"string", description:"email debe ser string y es requerido"},
+                cedula:{bsonType:"string", description:"cedula debe ser string y es requerido"},
+                rol:{bsonType:"string",enum:["admin","usuario","encargado"]},
+                permisos:{
+                    bsonType:"object",
+                    properties:{
+                        "/library":{
+                            bsonType:"array",
+                            items:{
+                                bsonType:"string",
+                                description:"Todas las versiones deben ser de tipo string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+db.users.createIndex({ email: 1 }, { unique: true });
+
+use('db_campus_library');
+db.createCollection('products',{
+    validator:{
+        $jsonSchema:{
+            bsonType:"object",
+            required:["nombre","tipo","codigoProducto","estado","descripcion"],
+            properties:{
+                nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
+                tipo:{bsonType:"string",description:"tipo debe ser string y es requerido"},
+                codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"},
+                estado:{bsonType:"string",enum:["disponible","mantenimiento","desabilitado"]},
+                descripcion:{bsonType:"string",description:"descripcion debe ser string y es requerido"},
+            }
+        }
+    }
+})
+
+use('db_campus_library');
+db.createCollection('booking',{
+    validator:{
+        $jsonSchema:{
+            bsonType:"object",
+            required:["fecha_reserva","fin_fecha_reserva","estado","id_codigoProducto","id_cedula"],
+            properties:{
+                fecha_reserva:{bsonType:"date",descripcion:"fecha_reserva es de tipo date y es requerido"},
+                fin_fecha_reserva:{bsonType:"date",descripcion:"fin_fecha_reserva es de tipo date y es requerido"},
+                estado:{bsonType:"string",enum:["prestado","recibido"]},
+                id_codigoProducto:{bsonType:"string",descripcion:"id_codigoProducto debe ser string y es requerido"},
+                id_cedula:{bsonType:"string",descripcion:"id_cedula debe ser string y es requerido"}
+            }
+        }
+    }
+})
+
+
