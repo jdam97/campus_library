@@ -1,11 +1,26 @@
 import { loadEnv } from "vite";
 import express from "express";
+import v1 from "./v1/index.js"
 // import cors from "cors";
-
 const env = loadEnv("development", process.cwd(), 'VITE')
 const app = express();
-
+app.use(express.json())
 // app.use(cors());
+
+
+
+//Endpoints
+app.use("/v1",v1)
+
+
+
+
+
+
+
+
+
+
 
 
 let config = {

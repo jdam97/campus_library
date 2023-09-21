@@ -3,13 +3,14 @@ db.createCollection('users',{
     validator:{
         $jsonSchema:{
             bsonType: "object",
-            required:["nombre","apellido","direccion","telefono","email","cedula"],
+            required:["nombre","apellido","direccion","telefono","email","password","cedula"],
             properties:{
                 nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
                 apellido:{bsonType:"string",description:"apellido debe ser string y es requerido"},
                 direccion:{bsonType:"string",description:"direccion debe ser string y es requerido"},
                 telefono:{bsonType:"string", description:"telefono debe ser string y es requerido"},
                 email:{bsonType:"string", description:"email debe ser string y es requerido"},
+                password:{bsonType:"string", description:"password debe ser string y es requerido"},
                 cedula:{bsonType:"string", description:"cedula debe ser string y es requerido"},
                 rol:{bsonType:"string",enum:["admin","usuario","encargado"]},
                 permisos:{
