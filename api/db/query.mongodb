@@ -38,7 +38,7 @@ db.createCollection('products',{
             required:["nombre","tipo","codigoProducto","estado","descripcion"],
             properties:{
                 nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
-                tipo:{bsonType:"string",description:"tipo debe ser string y es requerido"},
+                tipo:{bsonType:"string",enum:["libros","audifonos","equipo"]},
                 codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"},
                 estado:{bsonType:"string",enum:["disponible","mantenimiento","desabilitado"]},
                 descripcion:{bsonType:"string",description:"descripcion debe ser string y es requerido"},
@@ -52,13 +52,14 @@ db.createCollection('booking',{
     validator:{
         $jsonSchema:{
             bsonType:"object",
-            required:["fecha_recogida","fecha_entrega","estado","id_codigoProducto","id_cedula","comentarios"],
+            required:["fecha_recogida","fecha_entrega_solicitada","estado","codigoProducto","cedulaUser","comentarios"],
             properties:{
-                fecha_reserva:{bsonType:"date",descripcion:"fecha_reserva es de tipo date y es requerido"},
-                fin_fecha_reserva:{bsonType:"date",descripcion:"fin_fecha_reserva es de tipo date y es requerido"},
-                estado:{bsonType:"string",enum:["confirmada","cancelada","pendiente"]},
-                id_codigoProducto:{bsonType:"string",descripcion:"id_codigoProducto debe ser string y es requerido"},
-                id_cedula:{bsonType:"string",descripcion:"id_cedula debe ser string y es requerido"}
+                fecha_recogida:{bsonType:"date",description:"fecha_recogida es de tipo date y es requerido"},
+                fecha_entrega_solicitada:{bsonType:"date",description:"fecha_entrega_solicitada es de tipo date y es requerido"},
+                estado:{bsonType:"string",enum:["confirmado","cancelada","pendiente"]},
+                codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"},
+                cedulaUser:{bsonType:"string",description:"cedulaUser debe ser string y es requerido"},
+                comentarios:{bsonType:"string",description:"comentarios debe ser string y es requerido"}
             }
         }
     }
@@ -69,15 +70,18 @@ db.createCollection('loans',{
     validator:{
         $jsonSchema:{
             bsonType:"object",
-            required:["fecha_inicio","fecha_entrega","estado","id_cedula"],
+            required:["fecha_inicio","fecha_entrega","estado","cedulaUser","codigoProducto"],
             properties:{
                 fecha_inicio:{bsonType:"date",description:"fecha_inicio debe ser tipo date y es requerido"},
                 fecha_entrega:{bsonType:"date", description:"fecha_entrega debe ser de tipo date y es requerido"},
                 estado:{bsonType:"string",enum:["activo","finalizado","vencido"]},
-                id_cedula:{bsonType:"string",description:"id_cedula debe ser de tipo string y es requerido"}
+                cedulaUser:{bsonType:"string",description:"cedulaUser debe ser de tipo string y es requerido"},
+                codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"}
             }
         }
     }
 })
+
+
 
 

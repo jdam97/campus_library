@@ -1,0 +1,95 @@
+use('db_campus_library');
+db.users.insertMany([
+    {
+        nombre:"jonathan",
+        apellido:"alvarez",
+        direccion:"calle123",
+        telefono:"123456",
+        email:"jonathan@gmail.com",
+        cedula:"12345",
+        rol:"admin",
+    },
+    {
+        nombre:"david",
+        apellido:"monsalve",
+        direccion:"calle12",
+        telefono:"123456",
+        email:"david@gmail.com",
+        cedula:"123",
+        rol:"encargado",
+    },
+    {
+        nombre:"ludwing",
+        apellido:"vilamizar",
+        direccion:"calle1",
+        telefono:"54321",
+        email:"ludwing@gmail.com",
+        cedula:"54321",
+        rol:"usuario",
+    },
+    {
+        nombre:"jean",
+        apellido:"angarita",
+        direccion:"calle12",
+        telefono:"543214",
+        email:"jean@gmail.com",
+        cedula:"333",
+        rol:"usuario",
+    }
+])
+
+use('db_campus_library');
+db.products.insertMany([
+    {
+        nombre:"logitech-g733",
+        tipo:"audifonos",
+        codigoProducto:"a123",
+        estado:"disponible",
+        descripcion:"adudifonos logitech en buen estado"
+    },
+    {
+        nombre:"la divina comedia",
+        tipo:"libros",
+        codigoProducto:"l123",
+        estado:"disponible",
+        descripcion:"adudifonos logitech en buen estado"
+    },
+    {
+        nombre:"portatil msi-x5",
+        tipo:"equipo",
+        codigoProducto:"e123",
+        estado:"mantenimiento",
+        descripcion:"el productos se encuentra en mantenimiento por el momento"
+    }
+])
+
+use('db_campus_library');
+db.booking.insertMany([
+    {
+        fecha_recogida: new Date('2023-09-25'),
+        fecha_entrega_solicitada: new Date('2023-09-27'),
+        estado:"pendiente",
+        codigoProducto:"a123",
+        cedulaUser:"54321",
+        comentarios:"campus_library aun no confirma el pedido"
+    },
+    {
+        fecha_recogida: new Date('2023-10-25'),
+        fecha_entrega_solicitada: new Date('2023-11-27'),
+        estado:"confirmado",
+        codigoProducto:"l123",
+        cedulaUser:"333",
+        comentarios:"el usuario puede recoger el prestamo"
+    }
+])
+
+use('db_campus_library');
+db.loans.insertMany([
+    {
+        fecha_inicio: new Date('2023-10-27'),
+        fecha_entrega: new Date('2023-11-27'),
+        estado: "activo",
+        cedulaUser: "333",
+        codigoProducto:"l123"
+    }
+])
