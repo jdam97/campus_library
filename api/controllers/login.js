@@ -1,4 +1,5 @@
 import * as login from "../services/login.js";
+import {validationResult} from "express-validator"
 
 export const signIn = async(req,res)=>{
     try {
@@ -24,8 +25,11 @@ export const signIn = async(req,res)=>{
 }
 
 export const signUp = async(req,res)=>{
+    //Validacion 
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) return res.status(422).send(errors);
     try {
-        let data = await login.signUp(req.body);
+        await login.signUp(req.body);
         res.status(200).json({
             status:200,
             message:"usuario creado exitosamente"
