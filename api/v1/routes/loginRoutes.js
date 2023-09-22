@@ -5,7 +5,7 @@ import {vSchema} from "../../helpers/validationSchema.js";
 import { validarLogin } from "../../middlewares/loginValidation.js";
 const login = Router();
 
-login.use(limitRequestLogin)
+login.use(limitRequestLogin())
 
 login.post("/signIn",usuarioLogin.signIn)
 login.post("/signUp",vSchema(validarLogin),usuarioLogin.signUp)
