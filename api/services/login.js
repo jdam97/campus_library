@@ -9,3 +9,11 @@ export const signIn = async(value)=>{
     .toArray();
     return data
 }
+
+//Login SignUp
+export const signUp = async(value)=>{
+    let db = await connectDB();
+    let collection = db.collection('users');
+    let data = await collection.insertOne(value)
+    return data
+}

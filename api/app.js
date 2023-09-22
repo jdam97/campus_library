@@ -1,6 +1,6 @@
 import { loadEnv } from "vite";
 import express from "express";
-import v1 from "./v1/index.js"
+import v1 from "./v1/index.js";
 // import cors from "cors";
 const env = loadEnv("development", process.cwd(), 'VITE')
 const app = express();
