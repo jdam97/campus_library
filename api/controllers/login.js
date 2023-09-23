@@ -26,7 +26,7 @@ export const signIn = async(req,res)=>{
 
 export const signUp = async(req,res)=>{
     //Validacion 
-    const errors = validationResult(req)
+    const errors = validationResult(req); 
     if (!errors.isEmpty()) return res.status(422).send(errors);
     try {
         await login.signUp(req.body);
