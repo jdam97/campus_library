@@ -1,11 +1,11 @@
 import { loadEnv } from "vite";
 import express from "express";
 import v1 from "./v1/index.js";
-// import cors from "cors";
+import cors from "cors"; //debo colocarlos si o si ya que es una ley del navegador
 const env = loadEnv("development", process.cwd(), 'VITE')
 const app = express();
 app.use(express.json())
-// app.use(cors());
+app.use(cors());
 
 
 
