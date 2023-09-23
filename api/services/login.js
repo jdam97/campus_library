@@ -5,8 +5,16 @@ import {connectDB} from "../db/atlas.js";
 export const signIn = async(value)=>{
     let db = await connectDB();
     let collection = db.collection('users');
-    let data = await collection.find({email:value.email,password:value.password})
+    let data = await collection.aggregate([
+        {
+            $match:{email:value.email,password:value.password}
+        },
+        {
+            $project:{password:0}
+        }
+    ])
     .toArray();
+    console.log(data);
     return data
 }
 
@@ -14,6 +22,15 @@ export const signIn = async(value)=>{
 export const signUp = async(value)=>{
     let db = await connectDB();
     let collection = db.collection('users');
-    let data = await collection.insertOne(value)
+    await collection.insertOne(value);
+    let data = await collection.aggregate([
+        {
+            $match:{email:value.email,password:value.password}
+        },
+        {
+            $project:{password:0}
+        }
+    ])
     return data
 }
+//Hdpt1147
