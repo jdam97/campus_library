@@ -13,16 +13,6 @@ app.use(express.json())
 app.use("/v1",v1)
 
 
-
-
-
-
-
-
-
-
-
-
 let config = {
     port: env.VITE_PORT_BACKEND,
     hostname: env.VITE_HOSTNAME

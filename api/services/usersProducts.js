@@ -4,7 +4,7 @@ import { connectDB } from "../db/atlas.js";
 export const getProducts = async()=>{
     let db = await connectDB();
     let collection = db.collection('products');
-    let data = collection.find({estado:"disponible"})
+    let data = await collection.find({estado:"disponible"})
     .toArray();
     console.log(data);
     return data
