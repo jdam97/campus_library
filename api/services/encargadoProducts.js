@@ -14,5 +14,14 @@ export const createProduct = async(value)=>{
     const db = await connectDB();
     const collection = db.collection('products');
     let data = await collection.insertOne(value);
+    return data //retorna el bojectId del producto ingresado
+}
+
+//Actualizar productos
+export const updateProduct = async(value)=>{
+    const db = await connectDB();
+    const collection = db.collection('products');
+    let datos = {...value}
+    let data = await collection.updateOne({codigoProducto:value.codigoProducto},{$set:datos})
     return data
 }
