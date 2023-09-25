@@ -17,3 +17,19 @@ export const getAllproducts = async(req,res)=>{
     }
 }
 
+//Crear nuevo producto
+export const createProduct = async(req,res)=>{
+    try {
+        let data = await products.createProduct(req.body);
+        res.status(201).json({
+            status:201,
+            message:"Usuario creado exitosamente",
+            data
+        })
+    } catch (error) {
+        res.status(500).json({
+            message:"Error al crear usuario",
+            error:error.message
+        })
+    }
+}

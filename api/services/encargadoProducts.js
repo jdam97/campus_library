@@ -9,3 +9,9 @@ export const getAllProducts = async()=>{
     return data
 }
 
+//Crear nuevo producto
+export const createProduct = async(value)=>{
+    const db = await connectDB();
+    const collection = db.collection('products');
+    await collection.insertOne(value);
+}

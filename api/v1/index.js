@@ -7,8 +7,8 @@ import { Router } from "express";
 const v1 = Router()
 
 v1.use("/auth",login)
-v1.use("/users",userProducts)
-v1.use("/encargado",encargadoProducts)
+v1.use("/usuarios",userProducts)
+v1.use("/encargados",encargadoProducts)
 
 
 

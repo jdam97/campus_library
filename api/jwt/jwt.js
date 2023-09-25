@@ -12,7 +12,7 @@ export const generateToken = async (info) => {
       typ: "JWT"
     })
     .setIssuedAt()
-    .setExpirationTime("2h")
+    .setExpirationTime("24h")
     .sign(encoder.encode(config.JWT_SECRET));
   return jwt;
 }
