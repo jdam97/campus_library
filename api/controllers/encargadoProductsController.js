@@ -1,5 +1,6 @@
 import * as products from "../services/encargadoProducts.js";
 
+//Mostrar todos los productos
 export const getAllproducts = async(req,res)=>{
     try {
         let data = await products.getAllProducts();
@@ -15,3 +16,4 @@ export const getAllproducts = async(req,res)=>{
         })
     }
 }
+

@@ -1,5 +1,6 @@
 import * as products from "../services/usersProducts.js";
 
+//Mostrar solo los productos disponibles
 export const getProducts = async(req,res)=>{
     try {
         let data = await products.getProducts();

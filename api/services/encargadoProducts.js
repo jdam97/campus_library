@@ -1,5 +1,6 @@
 import {connectDB} from "../db/atlas.js";
 
+//Listar todos los productos
 export const getAllProducts = async()=>{
     const db = await connectDB();
     const collection = db.collection('products');
@@ -7,3 +8,4 @@ export const getAllProducts = async()=>{
     .toArray();
     return data
 }
+
