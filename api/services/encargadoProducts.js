@@ -13,5 +13,6 @@ export const getAllProducts = async()=>{
 export const createProduct = async(value)=>{
     const db = await connectDB();
     const collection = db.collection('products');
-    await collection.insertOne(value);
+    let data = await collection.insertOne(value);
+    return data
 }
