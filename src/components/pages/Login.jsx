@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 
 //Componente
-export const SignIn = () => {
+export const Login = () => {
   const redirect = useNavigate()
   //Variables radioactivas
   const [email,setEmail] = useState("") 
