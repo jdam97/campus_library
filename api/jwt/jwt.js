@@ -26,13 +26,14 @@ export const validateToken = async (req, res, next) => {
         status: 401,
         message: "token has not been assigned"
       })
+      
     } else {
       const encoder = new TextEncoder();
       req.auth = await jwtVerify(
         authorization,
         encoder.encode(config.JWT_SECRET)
       );
-      next();
+      next()
     }
   } catch (error) {
     res.status(400).json({

@@ -6,7 +6,6 @@ export const getProducts = async()=>{
     let collection = db.collection('products');
     let data = await collection.find({estado:"disponible"})
     .toArray();
-    console.log(data);
     return data
 }
 

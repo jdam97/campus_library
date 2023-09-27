@@ -14,16 +14,8 @@ db.createCollection('users',{
                 cedula:{bsonType:"string", description:"cedula debe ser string y es requerido"},
                 rol:{bsonType:"string",enum:["admin","usuario","encargado"]},
                 permisos:{
-                    bsonType:"object",
-                    properties:{
-                        "/library":{
-                            bsonType:"array",
-                            items:{
-                                bsonType:"string",
-                                description:"Todas las versiones deben ser de tipo string"
-                            }
-                        }
-                    }
+                    bsonType:"array",
+                    items:{bsonType:"string"}
                 }
             }
         }

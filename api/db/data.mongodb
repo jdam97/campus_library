@@ -9,6 +9,7 @@ db.users.insertMany([
         password:"12345",
         cedula:"12345",
         rol:"admin",
+        permisos:["admin"]
     },
     {
         nombre:"david",
@@ -19,6 +20,7 @@ db.users.insertMany([
         password:"12345",
         cedula:"123",
         rol:"encargado",
+        permisos:["encargado"]
     },
     {
         nombre:"ludwing",
@@ -29,6 +31,7 @@ db.users.insertMany([
         password:"12345",
         cedula:"54321",
         rol:"usuario",
+        permisos:["usuario"]
     },
     {
         nombre:"jean",
@@ -39,6 +42,7 @@ db.users.insertMany([
         password:"12345",
         cedula:"333",
         rol:"usuario",
+        permisos:["usuario"]
     }
 ])
 

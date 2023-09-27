@@ -19,18 +19,31 @@ export const signIn = async(value)=>{
 }
 
 //Login SignUp
-export const signUp = async(value)=>{
+export const signUp = async(user)=>{
     let db = await connectDB();
     let collection = db.collection('users');
+    //permisos
+    let permise = []
+    switch (user.rol) {
+        case "encargado": 
+            permise.push("encargado")
+            break;
+        case "usuario": 
+        permise.push("usuarios")
+            break;
+        default:
+            break;
+    }
+    let value ={...user,permisos:permise} 
     await collection.insertOne(value);
     let data = await collection.aggregate([
         {
-            $match:{email:value.email,password:value.password}
+            $match:{email:user.email,password:user.password}
         },
         {
             $project:{password:0}
         }
     ])
+    .toArray()
     return data
 }
-//Hdpt1147
