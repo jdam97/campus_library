@@ -7,5 +7,7 @@ const userProducts = Router();
 userProducts.use(limitRequest())
 
 userProducts.get("/disponibles",products.getProducts);
+userProducts.post("/booking",products.postBooking)
+userProducts.delete("/booking",products.deleteBooking)
 
 export default userProducts;
