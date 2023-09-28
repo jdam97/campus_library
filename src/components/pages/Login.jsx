@@ -45,6 +45,10 @@ export const Login = () => {
           <div className="contenedorInputs">
             <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electronico' />
             <input value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' />
+            <select name="rol">
+              <option value="usuario">Usuario</option>
+              <option value="encargado">Bibliotecario</option>
+            </select>
           </div>
           <button type='submit'>Enviar</button>
       </form>
