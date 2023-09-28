@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
+import "../../css/login.css"
 
 //Componente
 export const Login = () => {
@@ -39,20 +40,17 @@ export const Login = () => {
 }
 //Estructura
   return (
-   <div>
+   <div className='contenedor-main'>
       <form
       onSubmit={login}>{/*onSubmit: seria un evento de tipo submit*/}
           <div className="contenedorInputs">
             <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electronico' />
             <input value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' />
-            <select name="rol">
-              <option value="usuario">Usuario</option>
-              <option value="encargado">Bibliotecario</option>
-            </select>
           </div>
           <button type='submit'>Enviar</button>
       </form>
-      <Link to="/signUp">Sign Up</Link>
+      <Link to="/signUp">¿No tienes cuenta?, Registrate!</Link>
    </div>
+   
   )
 }
