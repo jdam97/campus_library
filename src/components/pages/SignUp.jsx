@@ -1,19 +1,27 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import "../../css/login.css"
+import "../../css/signUp.css"
             
-export const Home = () => {
+export const SignUp = () => {
+  const signUp = ()=>{
 
-
+  }
   return (
     <div className="container">
-      <form className='form'
-      onSubmit={login}>{/*onSubmit: seria un evento de tipo submit*/}
-      <p className='title'>Iniciar sesion</p>
-          <input className='username input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electronico' />
-          <input className='password input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' />
+      <form className='formSignUp' onSubmit={SignUp}>{/*onSubmit: seria un evento de tipo submit*/}
+          <p className='title'>Registro</p>
+          <input className='words input' type="text" placeholder='Nombre'/>
+          <input className='words input' type="text" placeholder='Apellido'/>
+          <input className='words input' type="text" placeholder='Numero de documento'/>
+          <input className='words input' type="text" placeholder='Direccion'/>
+          <input className='words input' type="text" placeholder='Telefono'/>
+          <input className='words input' type="email" placeholder='Correo electronico' />
+          <input className='words input' type="text" placeholder='Contraseña' />
+          <select name="rol">
+            <option value="usuario">Usuario</option>
+            <option value="encargado">Bibliotecario</option>
+          </select>
           <button className='btn' type='submit'>Enviar</button>
-          <Link className='registrarse' to="/signUp">¿No tienes cuenta?, Registrate!</Link>
       </form>
       </div>
   )
