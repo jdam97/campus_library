@@ -6,11 +6,11 @@ import "../../css/signUp.css"
 export const SignUp = () => {
   const redirect = useNavigate()
   //variables radiactivas: de esta manera creo las variables que contendran lo que se coloque en mi formulario como values
-  const [nombre,setNombre] = useState('')
-  const [apellido,setApellido] = useState('')
-  const [cedula,setcedula] = useState('')
-  const [direccion,setDireccion] = useState('')
-  const [telefono,setTelefono] = useState('')
+  const [nombre,setNombre] = useState("")
+  const [apellido,setApellido] = useState("")
+  const [cedula,setcedula] = useState("")
+  const [direccion,setDireccion] = useState("")
+  const [telefono,setTelefono] = useState("")
   const [email,setEmail] = useState("") 
   const [password,setPassword] = useState("")
 
