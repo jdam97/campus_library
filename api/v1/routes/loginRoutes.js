@@ -6,7 +6,7 @@ const login = Router();
 
 login.use(limitRequestLogin())
 
-login.post("/signIn",usuarioLogin.signIn)
+login.post("/signIn",validarSignIn,usuarioLogin.signIn)
 login.post("/signUp",validarSignUp,usuarioLogin.signUp)
 
 export default login;

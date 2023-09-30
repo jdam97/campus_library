@@ -29,18 +29,16 @@ export const SignUp = () => {
         telefono,
         email,
         password,
-        rol
       })
     })).json();
     if (data.status == 200) {
       console.log(data);
       localStorage.setItem("token",data.token);
-      console.log(data.data[0].rol);
       redirect("/users",{
       })}
     else{
-      console.log(data.message);
-      alert(data.message)
+      console.log(data.error);
+      alert(data.error)
     }
   }
   //Estructura

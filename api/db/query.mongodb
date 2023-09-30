@@ -3,7 +3,7 @@ db.createCollection('users',{
     validator:{
         $jsonSchema:{
             bsonType: "object",
-            required:["nombre","apellido","direccion","telefono","email","password","cedula","rol"],
+            required:["nombre","apellido","direccion","telefono","email","password","cedula"],
             properties:{
                 nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
                 apellido:{bsonType:"string",description:"apellido debe ser string y es requerido"},

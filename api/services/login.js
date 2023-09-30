@@ -22,19 +22,8 @@ export const signIn = async(value)=>{
 export const signUp = async(user)=>{
     let db = await connectDB();
     let collection = db.collection('users');
-    //permisos
-    let permise = []
-    switch (user.rol) {
-        case "encargado": 
-            permise.push("encargado")
-            break;
-        case "usuario": 
-        permise.push("usuarios")
-            break;
-        default:
-            break;
-    }
-    let value ={...user,permisos:permise} 
+    let value ={...user,rol:'usuario',permisos:'usuario'} 
+    console.log(value);
     await collection.insertOne(value);
     let data = await collection.aggregate([
         {
