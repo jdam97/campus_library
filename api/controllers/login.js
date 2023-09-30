@@ -43,7 +43,8 @@ export const signUp = async(req,res)=>{
         res.status(200).json({
             status:200,
             message:"usuario creado exitosamente",
-            token
+            token,
+            data
         })
     } catch (error) {
         if(error.code == 11000){ // es el error de usuarios repetidos de mongodb

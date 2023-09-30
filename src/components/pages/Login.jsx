@@ -6,7 +6,7 @@ import "../../css/login.css"
 //Componente
 export const Login = () => {
   const redirect = useNavigate()
-  //Variables radioactivas
+  //Variables radioactivas:de esta manera creo las variables que contendran lo que se coloque en mi formulario como values
   const [email,setEmail] = useState("") 
   const [password,setPassword] = useState("")
   const [registrar,setRegistrar] = useState(false)
@@ -26,13 +26,19 @@ export const Login = () => {
   if(data.status == 200){
     console.log(data);
     localStorage.setItem("token", data.token);
-    redirect("/users", {
-      state: {
-        user: {
-          nombre: data.user[0].nombre
-        }
-      }
-    })
+    if (data.user[0].rol==="usuario") {
+      redirect("/users", {
+      })
+    }
+    else if(data.user[0].rol==="encargado"){
+      redirect("/staff", {
+      })
+    }
+    else{
+      redirect("/admin", {
+      })
+    }
+    
   }else{
     console.log(data.message);
     alert(data.message)
@@ -45,15 +51,14 @@ export const Login = () => {
       <div className="container">
       <form className='form'
       onSubmit={login}>{/*onSubmit: seria un evento de tipo submit*/}
-      <p className='title'>Iniciar sesion</p>
-          <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electronico' required/>
+      <p className='title'>Iniciar sesión</p>
+          <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electrónico' required/>
           <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' required/>
           <button className='btn' type='submit'>Enviar</button>
-          <Link className='registrarse' onClick={()=>setRegistrar(!registrar)} >¿No tienes cuenta?, Registrate!</Link>
+          <Link className='registrarse' onClick={()=>setRegistrar(!registrar)} >¿No tienes cuenta?, ¡Registrate!</Link>
       </form> 
       </div>
   ):( <SignUp/>)}
    </div>
-   
   )
 }
