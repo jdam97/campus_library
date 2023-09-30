@@ -5,7 +5,12 @@ import cors from "cors"; //debo colocarlos si o si ya que es una ley del navegad
 const env = loadEnv("development", process.cwd(), 'VITE')
 const app = express();
 app.use(express.json())
-app.use(cors());
+app.use(cors( //cors me deja solamente recibir peticiones de mis rutas de frontend de esta
+{
+    origin:`http://${env.VITE_HOSTNAME}:${env.VITE_PORT_FRONTEND}`,
+    credentials: true
+}
+));
 
 
 
