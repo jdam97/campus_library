@@ -46,13 +46,13 @@ export const SignUp = () => {
     <div className="container animate__animated animate__backInDown" >
       <form className='formSignUp' onSubmit={signUp}>{/*onSubmit: seria un evento de tipo submit, recibe una funcion que tiene toda la lógica*/}
           <p className='titleSignUp'>Registro</p>
-          <input className='words input' value={nombre} onChange={(e)=>setNombre(e.target.value)} type="text" placeholder='Nombre'/>
-          <input className='words input' value={apellido} onChange={(e)=>setApellido(e.target.value)} type="text" placeholder='Apellido'/>
-          <input className='words input' value={cedula} onChange={(e)=>setcedula(e.target.value)} type="text" placeholder='Número de documento'/>
-          <input className='words input' value={direccion} onChange={(e)=>setDireccion(e.target.value)} type="text" placeholder='Dirección'/>
-          <input className='words input' value={telefono} onChange={(e)=>setTelefono(e.target.value)} type="text" placeholder='Teléfono'/>
-          <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electrónico' />
-          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' />
+          <input className='words input' value={nombre} onChange={(e)=>setNombre(e.target.value)} type="text" placeholder='Nombre' required/>
+          <input className='words input' value={apellido} onChange={(e)=>setApellido(e.target.value)} type="text" placeholder='Apellido' required/>
+          <input className='words input' value={cedula} onChange={(e)=>setcedula(e.target.value)} type="text" placeholder='Número de documento' required/>
+          <input className='words input' value={direccion} onChange={(e)=>setDireccion(e.target.value)} type="text" placeholder='Dirección' required/>
+          <input className='words input' value={telefono} onChange={(e)=>setTelefono(e.target.value)} type="text" placeholder='Teléfono' required/>
+          <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electrónico' required/>
+          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' required/>
           <button className='btn' type='submit'>Enviar</button>
       </form>
       </div>
