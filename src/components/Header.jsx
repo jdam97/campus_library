@@ -1,28 +1,30 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import logo from "../assets/logo-library.png"
+import logoLogin from "../assets/chopper.png"
+import "../css/header.css"
 
 
-export const Header = () =>{
+export const Header = ({user}) =>{
     const redirect = useNavigate()
+
+    let handleLogout = (e)=>{
+        e.preventDefault()
+        //quito el token del localstorage
+        localStorage.removeItem('token')
+        redirect('/')
+    }
     
-
-
-
-
-
+    
     return(
         <div className="container-header">
-            <img src="" alt="" />
-            <h2>Campus Lirbary</h2>
+            <img className="logo" src={logo} alt="logo" />
+            <h2>Campus Library</h2>
             <div className="user">
-                <img src="" alt="" />
-                <h3>Nombre usuario</h3>
-                <link>Log out</link>
+                <img className='logo-user'src={logoLogin} alt="chopper" />
+                <h3>{user.nombre}</h3>
+                <Link onClick={handleLogout}>Log out</Link>
             </div>
-            
-        
-        
-        
         </div>
     )
 }

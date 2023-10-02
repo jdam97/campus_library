@@ -1,3 +1,4 @@
+import { Auth } from "./components/Auth"; //Auth es mi middleware que no me permite entrar si no tengo el token de verificacion
 import { Login } from "./components/pages/Login";
 import { SignUp } from "./components/pages/SignUp";
 import {Users} from "./components/pages/Users";
@@ -8,8 +9,7 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Login/>}/>
-      <Route path="/signUp" element={<SignUp/>}/>
-      <Route path="/users" element={<Users/>}/>
+      <Route path="/users" element={<Auth> <Users/> </Auth>}/>
     </Routes>
   </Router>
   )

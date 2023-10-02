@@ -27,15 +27,24 @@ export const Login = () => {
     console.log(data);
     localStorage.setItem("token", data.token);
     if (data.user[0].rol==="usuario") {
-      redirect("/users", {
+      redirect("/users",{
+        state:{
+          user: data.user[0]
+        }
       })
     }
     else if(data.user[0].rol==="encargado"){
       redirect("/staff", {
+        state:{
+          user: data.user[0]
+        }
       })
     }
     else{
       redirect("/admin", {
+        state:{
+          user: data.user[0]
+        }
       })
     }
     
