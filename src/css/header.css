@@ -14,21 +14,16 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem;
-    background-color: #333; /* Cambia el color de fondo según tu preferencia */
-    color: #fff; /* Cambia el color de texto según tu preferencia */
+    background-color: #424242; /* Cambia el color de fondo según tu preferencia */
+    color: wheat; /* Cambia el color de texto según tu preferencia */
   }
-  
+  /* #D2B48C amarillo posible */
   /* Estilos para el logo */
   .container-header img {
     width: 80px; /* Ajusta el ancho de la imagen del logo según tu preferencia */
     height: 40px; /* Ajusta la altura de la imagen del logo según tu preferencia */
   }
   
-  /* Estilos para el título "Campus Library" */
-  .container-header h2 {
-    font-size: 24px; /* Cambia el tamaño de fuente según tu preferencia */
-    margin: 0; /* Elimina el margen por defecto del encabezado */
-  }
   
   /* Estilos para la sección de usuario */
   .user {
@@ -44,6 +39,10 @@ html{
     border-radius: 50%; /* Aplica bordes redondeados para la imagen del usuario */
     margin-right: 10px; /* Añade un margen a la derecha de la imagen del usuario */
   }
+
+  .logo-user{
+    border-radius: 50%
+  }
   
   /* Estilos para el nombre del usuario */
   .user h3 {
@@ -51,5 +50,15 @@ html{
     margin: 0; /* Elimina el margen por defecto del encabezado */
   }
 
+  .log-out{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
 
+h2{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 35px;
+  font-weight: 400px;
+}
   

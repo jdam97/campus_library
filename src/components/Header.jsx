@@ -23,7 +23,7 @@ export const Header = ({user}) =>{
             <div className="user">
                 <img className='logo-user'src={logoLogin} alt="chopper" />
                 <h3>{user.nombre}</h3>
-                <Link onClick={handleLogout}>Log out</Link>
+                <Link className="log-out" onClick={handleLogout}>Log out</Link>
             </div>
         </div>
     )
