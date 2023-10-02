@@ -16,7 +16,7 @@ export const SignUp = () => {
 
   const signUp = async (e)=>{
     e.preventDefault()
-    const data = await(await fetch(`http://127.0.0.0:5047/v1/auth/signUp`,{
+    const data = await(await fetch(`http://127.0.0.1:5047/v1/auth/signUp`,{
       method:"POST",
       headers:{
         "Content-Type": "application/json",

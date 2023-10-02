@@ -22,8 +22,7 @@ export const signIn = async(value)=>{
 export const signUp = async(user)=>{
     let db = await connectDB();
     let collection = db.collection('users');
-    let value ={...user,rol:'usuario',permisos:'usuario'} 
-    console.log(value);
+    let value ={...user,rol:'usuario',permisos:['usuario']} 
     await collection.insertOne(value);
     let data = await collection.aggregate([
         {
