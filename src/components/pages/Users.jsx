@@ -49,7 +49,6 @@ export const Users = () =>{
                 <table>
                     <thead>
                     <tr>
-                        
                         <th>Nombre</th>
                         <th>Tipo</th>
                         <th>Descripcion</th>

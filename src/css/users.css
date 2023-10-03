@@ -28,7 +28,7 @@ html{
 
 /* Estilos para el contenedor de la tabla */
 .contenedor-table {
-    width: 50rem;
+    width: 80rem;
     height: 50rem;
     overflow-y: auto; 
     border-radius: 5px; 
@@ -41,6 +41,7 @@ html{
 
 /* Estilos para la tabla */
 table {
+  
     width: 100%;
     border-collapse: collapse;
     border-radius: 5px;
@@ -49,6 +50,7 @@ table {
   
   /* Estilos para el encabezado de la tabla (th) */
   th {
+    text-align: center;
     background-color: #333;
     color: #fff;
     font-weight: bold;
@@ -58,11 +60,13 @@ table {
   
   /* Estilos para las filas de la tabla */
   tr {
+    
     border-bottom: 1px solid #ccc;
   }
   
   /* Estilos para las celdas de la tabla (td) */
   td {
+    
     padding: 10px;
     text-align: left;
     background-color: wheat;
