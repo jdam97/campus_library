@@ -18,7 +18,7 @@ export const Header = ({user}) =>{
     
     return(
         <div className="container-header">
-            <img className="logo" src={logo} alt="logo" />
+            <img className="logo-header " src={logo} alt="logo" />
             <h2>Campus Library</h2>
             <div className="user">
                 <img className='logo-user'src={logoLogin} alt="chopper" />

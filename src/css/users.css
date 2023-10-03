@@ -19,10 +19,74 @@ html{
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
+
+/* Estilos para el contenedor de la tabla */
+.contenedor-table {
+    width: 50rem;
+    height: 50rem;
+    overflow-y: auto; 
+    border-radius: 5px; 
+    padding: 10px;
+    /* background: linear-gradient(to right, #000, #333); */
+}
+  
+
+/* table */
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el encabezado de la tabla (th) */
+  th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estilos para las filas de la tabla */
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilos para las celdas de la tabla (td) */
+  td {
+    padding: 10px;
+    text-align: left;
+    background-color: wheat;
+  }
+  
+  /* Estilos para el botón "Reservar" */
+  button {
+    background-color: #FF6B6B;
+    
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.6s, color .8s;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+  }
+
+
+  
+  
+  
+  
+  

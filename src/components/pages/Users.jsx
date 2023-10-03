@@ -8,7 +8,7 @@ export const Users = () =>{
     const location = useLocation();
     let user = location.state.user;
     const [mostrarContenido,setMostrarcontenido] = useState(false);
-    const [data,setData]=useState(null);
+    const [data,setData]=useState([]);
 
     useEffect(()=>{
         const getProducts = async()=>{
@@ -21,9 +21,9 @@ export const Users = () =>{
             },
         })).json();
         if (data.status==200) {
-            console.log(data);
             setMostrarcontenido(true);
-            setData(data)
+            console.log(data.data);
+            setData(data.data)
         }
         else{
             console.log(data.error);
@@ -44,8 +44,33 @@ export const Users = () =>{
     return(
         <div>
             <Header user={user} />
-            <div className="contenedor-users"></div>
-            <h1>{data && data.data && data.data[1] && data.data[1].nombre} </h1>
+            <div className="contenedor-users"> 
+                <div className="contenedor-table">
+                <table>
+                    <thead>
+                    <tr>
+                        
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Descripcion</th>
+                        <th>Estado</th>
+                        <th>Reservar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((item) => (
+                        <tr key={item._id}>
+                            <td>{item.nombre} </td>
+                            <td>{item.tipo} </td>
+                            <td>{item.descripcion} </td>
+                            <td>{item.estado} </td>
+                            <td><button>Reservar</button></td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </table>
+                </div> 
+            </div>
         </div>
     )
 }
