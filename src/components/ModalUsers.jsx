@@ -26,9 +26,14 @@ const ModalUsers = ({ isOpen, setIsOpen,codigoProductoSeleccionado,user})=>{
                 cedulaUser:user
             })
         })).json();
+      
         if (result.status ==200){
             console.log(result);
             alert('Registro creado exitosamente')
+            setIsOpen(false)
+            setFecha_entrega_solicitada('')
+            setFecha_recogida('')
+
         }
         else{
             console.log(result.error);
