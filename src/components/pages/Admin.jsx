@@ -40,8 +40,8 @@ export const Admin = ()=>{
             e.tarjet.reset()
         }
         else{
-          console.log(data.error);
-          alert(data.error)
+          console.log(data.message);
+          alert(data.message)
         }
       }
       //Estructura
