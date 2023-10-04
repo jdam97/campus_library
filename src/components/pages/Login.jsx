@@ -62,7 +62,7 @@ export const Login = () => {
       onSubmit={login}>{/*onSubmit: seria un evento de tipo submit*/}
       <p className='title'>Iniciar sesión</p>
           <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electrónico' required/>
-          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' required/>
+          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='Contraseña' required/>
           <button className='btn' type='submit'>Enviar</button>
           <Link className='registrarse' onClick={()=>setRegistrar(!registrar)} >¿No tienes cuenta?, ¡Registrate!</Link>
       </form> 

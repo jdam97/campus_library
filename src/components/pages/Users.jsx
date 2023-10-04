@@ -30,8 +30,6 @@ export const Users = () =>{
         if (data.status==200) {
             setMostrarcontenido(true);
             setData(data.data)
-            console.log(data);
-            console.log(user);
         }
         else{
             console.log(data.error);
@@ -70,7 +68,7 @@ export const Users = () =>{
                             <td>{item.tipo} </td>
                             <td>{item.descripcion} </td>
                             <td>{item.estado} </td>
-                            <td><button onClick={()=>openModalWithProductCode(item.codigoProducto)}>Reservar</button></td>
+                            <td><button className="button-users" onClick={()=>openModalWithProductCode(item.codigoProducto)}>Reservar</button></td>
                         </tr>
                         ))}
                     </tbody>

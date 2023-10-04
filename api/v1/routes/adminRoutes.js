@@ -5,6 +5,7 @@ import { limitRequest } from "../../helpers/ratelimit.js";
 
 const admin = Router();
 
+admin.get("/",loginStaff.getAllStaff)
 admin.post("/signUpStaff",limitRequest(),validarSignUp,loginStaff.signUpStaff)
 
 export default admin;

@@ -52,7 +52,7 @@ export const SignUp = () => {
           <input className='words input' value={direccion} onChange={(e)=>setDireccion(e.target.value)} type="text" placeholder='Dirección' required/>
           <input className='words input' value={telefono} onChange={(e)=>setTelefono(e.target.value)} type="text" placeholder='Teléfono' required/>
           <input className='words input' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Correo electrónico' required/>
-          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder='Contraseña' required/>
+          <input className='words input' value={password} onChange={(e)=>setPassword(e.target.value)} type="password" placeholder='Contraseña' required/>
           <button className='btn' type='submit'>Enviar</button>
       </form>
       </div>

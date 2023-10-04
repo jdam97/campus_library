@@ -17,3 +17,12 @@ export const signUpStaff = async(user)=>{
     .toArray()
     return data
 }
+
+//mostrar colaboradores
+export const getAllStaff = async()=>{
+    let db = await connectDB();
+    let collection = db.collection('users')
+    let data = await collection.find({rol:"encargado"})
+    .toArray()
+    return data
+}
