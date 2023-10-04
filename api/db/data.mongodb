@@ -60,56 +60,56 @@ db.products.insertMany([
         tipo: "libros",
         codigoProducto: "l124",
         estado: "disponible",
-        descripcion: "La obra maestra de Miguel de Cervantes Saavedra narra las aventuras de Don Quijote, un caballero que enloquece por la lectura excesiva de libros de caballerías y se convierte en un caballero andante. Junto a su fiel escudero, Sancho Panza, recorre tierras de La Mancha en busca de aventuras y hazañas, creyendo enfrentarse a gigantes cuando en realidad se enfrenta a molinos de viento. La novela es una sátira de la sociedad y la literatura de la época y es considerada una de las obras más importantes de la literatura universal."
+        descripcion: "La obra maestra de Miguel de Cervantes Saavedra narra las aventuras de Don Quijote, un caballero que enloquece por la lectura excesiva de libros de caballerías y se convierte en un caballero andante."
     },
     { 
         nombre: "Cien años de soledad",
         tipo: "libros",
         codigoProducto: "l125",
         estado: "disponible",
-        descripcion: "Esta obra maestra de Gabriel García Márquez narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo. La novela combina elementos de realismo mágico con una narración épica, explorando temas como el amor, la soledad y el paso del tiempo."
+        descripcion: "Esta obra maestra de Gabriel García Márquez narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo."
     },
     {
         nombre: "Matar a un ruiseñor",
         tipo: "libros",
         codigoProducto: "l126",
         estado: "disponible",
-        descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930. La novela aborda temas de justicia racial y moralidad a través del juicio de un hombre negro acusado injustamente."
+        descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930."
     },
     {
         nombre: "Matar a un ruiseñor",
         tipo: "libros",
         codigoProducto: "l126",
         estado: "disponible",
-        descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930. La novela aborda temas de justicia racial y moralidad a través del juicio de un hombre negro acusado injustamente."
+        descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930."
     },
     {
         nombre: "1984",
         tipo: "libros",
         codigoProducto: "l127",
         estado: "disponible",
-        descripcion: "George Orwell escribió esta distopía en la que se describe un mundo totalitario en el que el gobierno controla todos los aspectos de la vida de las personas. La novela sigue a Winston Smith, quien desafía el sistema opresivo a pesar de las consecuencias."
+        descripcion: "George Orwell escribió esta distopía en la que se describe un mundo totalitario en el que el gobierno controla todos los aspectos de la vida de las personas."
     },
     {
         nombre: "Orgullo y prejuicio",
         tipo: "libros",
         codigoProducto: "l128",
         estado: "disponible",
-        descripcion: "Esta obra de Jane Austen es una comedia romántica que sigue la historia de Elizabeth Bennet y su relación con el apuesto pero orgulloso señor Darcy. La novela aborda temas de clase social y prejuicio en la Inglaterra del siglo XIX."
+        descripcion: "Esta obra de Jane Austen es una comedia romántica que sigue la historia de Elizabeth Bennet y su relación con el apuesto pero orgulloso señor Darcy."
     },
     {
         nombre: "El Gran Gatsby",
         tipo: "libros",
         codigoProducto: "l129",
         estado: "disponible",
-        descripcion: "Escrita por F. Scott Fitzgerald, esta novela ambientada en la década de 1920 en Estados Unidos sigue la vida de Jay Gatsby y su obsesión por recuperar a su amor de juventud, Daisy Buchanan. La obra es un retrato de la decadencia de la alta sociedad y el sueño americano."
+        descripcion: "Escrita por F. Scott Fitzgerald, esta novela ambientada en la década de 1920 en Estados Unidos sigue la vida de Jay Gatsby y su obsesión por recuperar a su amor de juventud, Daisy Buchanan."
     },
     {
         nombre: "Moby Dick",
         tipo: "libros",
         codigoProducto: "l130",
         estado: "disponible",
-        descripcion: "Escrito por Herman Melville, este clásico narra la obsesiva búsqueda del capitán Ahab por vengarse de Moby Dick, una gran ballena blanca que le arrancó una pierna. La novela es una exploración de la obsesión y el conflicto entre el hombre y la naturaleza."
+        descripcion: "Escrito por Herman Melville, este clásico narra la obsesiva búsqueda del capitán Ahab por vengarse de Moby Dick, una gran ballena blanca que le arrancó una pierna."
     },
     {
         nombre: "La Odisea",

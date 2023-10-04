@@ -16,7 +16,7 @@ export const postBooking = async(value)=>{
     const collection = db.collection('booking');
     let fechaInicio = new Date(value.fecha_recogida);
     let fechaFinal = new Date(value.fecha_entrega_solicitada);
-    let datos = {...value,fecha_recogida:fechaInicio,fecha_entrega_solicitada:fechaFinal};
+    let datos = {...value,fecha_recogida:fechaInicio,fecha_entrega_solicitada:fechaFinal,estado:"pendiente"};
     const data = await collection.insertOne(datos);
     console.log(data);
     return data

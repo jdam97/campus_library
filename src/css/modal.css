@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font: 62.5%;
+}
+
+/* Modal */
+/* Estilo para el fondo oscurecido */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Coloca el fondo oscurecido sobre otros elementos */
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content {
+    background-color: #fff; /* Fondo del modal */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    padding: 20px;
+    max-width: 80%; /* Ancho máximo del modal */
+    max-height: 80%; /* Altura máxima del modal */
+    overflow-y: auto; /* Habilitar desplazamiento vertical si el contenido es demasiado largo */
+  }
+  
+  /* Estilo para el botón de cierre del modal */
+  .close-button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #d14525;
+  }
+
+  /* Form */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }

@@ -45,14 +45,14 @@ db.createCollection('booking',{
     validator:{
         $jsonSchema:{
             bsonType:"object",
-            required:["fecha_recogida","fecha_entrega_solicitada","estado","codigoProducto","cedulaUser","comentarios"],
+            required:["fecha_recogida","fecha_entrega_solicitada","cedulaUser","codigoProducto",],
             properties:{
                 fecha_recogida:{bsonType:"date",description:"fecha_recogida es de tipo date y es requerido"},
                 fecha_entrega_solicitada:{bsonType:"date",description:"fecha_entrega_solicitada es de tipo date y es requerido"},
                 estado:{bsonType:"string",enum:["confirmado","cancelada","pendiente"]},
                 codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"},
                 cedulaUser:{bsonType:"string",description:"cedulaUser debe ser string y es requerido"},
-                comentarios:{bsonType:"string",description:"comentarios debe ser string y es requerido"}
+                comentarios:{bsonType:"string",description:"comentarios debe ser string"}
             }
         }
     }
