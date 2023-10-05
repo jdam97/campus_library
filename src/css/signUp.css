@@ -30,6 +30,22 @@ html{
     border-radius: 0.5rem;
     justify-content: center;
   }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    /* Redefinir los estilos del formulario para dispositivos móviles */
+    .formSignUp {
+      width: 100%; /* Ancho completo en dispositivos móviles */
+      max-width: none; /* Eliminar el ancho máximo */
+      border-radius: 0; /* Bordes rectos en dispositivos móviles */
+      padding: 10px; /* Reducir el relleno en dispositivos móviles */
+    }
+  
+    /* Redefinir los estilos de los campos de entrada para dispositivos móviles */
+    .words.input {
+      padding: 8px;
+    }
+  }
   
   .titleSignUp {
     color: wheat;

@@ -34,6 +34,30 @@ html{
     overflow-y: auto; /* Habilitar desplazamiento vertical si el contenido es demasiado largo */
   }
   
+  .contenedor-button-modal{
+    display: block;
+    display: flex;
+  }
+  /* Estilos específicos para dispositivos móviles */
+  @media (max-width: 768px) {
+    /* Redefinir los estilos del modal para dispositivos móviles */
+    .modal-content {
+      width: 100%; /* Ancho completo en dispositivos móviles */
+      max-width: none; /* Eliminar el ancho máximo */
+      border-radius: 0; /* Bordes rectos en dispositivos móviles */
+      padding: 1px; /* Reducir el relleno en dispositivos móviles */
+      
+    }
+  
+    /* Estilos para el botón Close en dispositivos móviles */
+    .close-button {
+      top: 5px;
+      right: 5px;
+      margin: 0 auto;
+    }
+  
+    /* Puedes ajustar otros estilos según sea necesario para dispositivos móviles */
+  }
   /* Estilo para el botón de cierre del modal */
   .close-button {
     background-color: #ff5733;

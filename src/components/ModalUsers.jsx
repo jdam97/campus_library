@@ -58,10 +58,12 @@ const ModalUsers = ({ isOpen, setIsOpen,codigoProductoSeleccionado,user})=>{
             <label htmlFor="fecha_entrega">Fecha Entrega Reserva:</label>
             <input className='words input' value={fecha_entrega_solicitada} onChange={(e)=>setFecha_entrega_solicitada(e.target.value)} type="date" placeholder='Fecha Entrega' required/>
         </div>
-          <button className='btn' type='submit'>Reservar</button>
        
+          <button className='btn' type='submit'>Reservar</button>
       </form> 
+       <div className='contenedor-button-modal'>
         <button className="close-button" onClick={()=>setIsOpen(false)}>Close</button>
+        </div>
         </Modal>
     )
 }

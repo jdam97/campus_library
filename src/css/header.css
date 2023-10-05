@@ -17,6 +17,13 @@ html{
     background: linear-gradient(to right, #000, #333);
     color: wheat; /* Cambia el color de texto según tu preferencia */
   }
+  @media (max-width: 768px) {
+    .container-header {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }}
+
   /* #D2B48C amarillo posible */
   /* Estilos para el logo */
  

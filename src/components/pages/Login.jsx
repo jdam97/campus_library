@@ -10,6 +10,7 @@ export const Login = () => {
   const [email,setEmail] = useState("") 
   const [password,setPassword] = useState("")
   const [registrar,setRegistrar] = useState(false)
+  
 
   const login = async (e) => {
   e.preventDefault()
@@ -53,6 +54,9 @@ export const Login = () => {
     alert(data.message)
   }
 }
+// const activeButton = ()=>{
+//   setmostrarSignUp(true)
+// }
 //Estructura
   return (
    <div className='contenedor-main'>
@@ -67,7 +71,7 @@ export const Login = () => {
           <Link className='registrarse' onClick={()=>setRegistrar(!registrar)} >¿No tienes cuenta?, ¡Registrate!</Link>
       </form> 
       </div>
-  ):( <SignUp/>)}
+  ):( <SignUp setRegistrar={setRegistrar} />)}
    </div>
   )
 }
