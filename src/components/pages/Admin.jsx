@@ -17,7 +17,7 @@ export const Admin = ()=>{
     useEffect(()=>{
       const showStaff = async ()=>{
         let token = localStorage.getItem('token')
-        const data = await (await fetch(`http://127.0.0.1:5047/v1/admin`,{
+        const data = await (await fetch(`http://192.168.129.72:5047/v1/admin`,{
           method:"GET",
           headers:{
             "Content-Type":"application/json",

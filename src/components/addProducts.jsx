@@ -13,7 +13,7 @@ export const Product = ({setCreateProducts} )=>{
     const createProducts = async (e)=>{
         e.preventDefault()
         const token = localStorage.getItem("token")
-        const data = await(await fetch(`http://127.0.0.1:5047/v1/staff/productos`,{
+        const data = await(await fetch(`http://192.168.129.72:5047/v1/staff/productos`,{
           method:"POST",
           headers:{
             "Content-Type": "application/json",

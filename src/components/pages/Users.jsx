@@ -20,7 +20,7 @@ export const Users = () =>{
     useEffect(()=>{
         const getProducts = async()=>{
             let token = localStorage.getItem('token')
-            const data = await(await fetch(`http://127.0.0.1:5047/v1/usuarios/disponibles`,{
+            const data = await(await fetch(`http://192.168.129.72:5047/v1/usuarios/disponibles`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",

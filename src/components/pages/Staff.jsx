@@ -17,7 +17,7 @@ useEffect(()=>{
     const showBooking = async()=>{
         setIsLoading(true);
         try {
-        const data = await(await fetch(`http://127.0.0.1:5047/v1/staff`,{
+        const data = await(await fetch(`http://192.168.129.72:5047/v1/staff`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -44,7 +44,7 @@ const buttonAceptar = async(item)=>{
     setIsLoading(true); 
     console.log(item);
     try {
-    const datos = await(await fetch(`http://127.0.0.1:5047/v1/staff/loans`,{
+    const datos = await(await fetch(`http://192.168.129.72:5047/v1/staff/loans`,{
         method:"POST",
         headers:{
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const buttonAceptar = async(item)=>{
         })
     })).json()
     if(datos.status ===200){
-        await(await fetch(`http://127.0.0.1:5047/v1/staff/loans`,{
+        await(await fetch(`http://192.168.129.72:5047/v1/staff/loans`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",
@@ -84,7 +84,7 @@ const buttonAceptar = async(item)=>{
 const buttonDenegar = async(item)=>{
     setIsLoading(true); 
     try {
-        await(await fetch(`http://127.0.0.1:5047/v1/staff/loans`,{
+        await(await fetch(`http://192.168.129.72:5047/v1/staff/loans`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",

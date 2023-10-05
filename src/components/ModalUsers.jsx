@@ -13,7 +13,7 @@ const ModalUsers = ({ isOpen, setIsOpen,codigoProductoSeleccionado,user})=>{
     const reserva = async (e)=>{
         e.preventDefault()
         let token = localStorage.getItem('token')
-        const result = await(await fetch(`http://127.0.0.1:5047/v1/usuarios/booking`,{
+        const result = await(await fetch(`http://192.168.129.72:5047/v1/usuarios/booking`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json",
