@@ -67,6 +67,14 @@ Luego de hacer la reserva del libro que se requiere, se envia una solicitud al b
 **GET** `http://192.168.129.72:5047/v1/admin` Automaticamente al cargar la página de admin, esta traerá las cards con la información de todos los usuarios actuales de la biblioteca.
 ![Alt text](./client/public/image-5.png)
 
+_Correo del admin_
+```bash
+    {
+        correo:"jonathan@gmail.com",
+        pass:"12345"
+    }
+```
+
 **GET** `http://192.168.129.72:5047/v1/admin/signUpStaff` Permite crear nuevos colaboradores para que estos inicien sesion normalmente desde el apartado del login con su rol de "colaborador".
 
 ## Tecnolog铆as Utilizadas
