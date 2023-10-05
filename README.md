@@ -75,7 +75,7 @@ _Correo del admin_
     }
 ```
 
-**GET** `http://192.168.129.72:5047/v1/admin/signUpStaff` Permite crear nuevos colaboradores para que estos inicien sesion normalmente desde el apartado del login con su rol de "colaborador".
+**POST** `http://192.168.129.72:5047/v1/admin/signUpStaff` Permite crear nuevos colaboradores para que estos inicien sesion normalmente desde el apartado del login con su rol de "colaborador".
 
 ## Tecnolog铆as Utilizadas
 
