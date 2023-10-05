@@ -63,7 +63,7 @@ db.createCollection('loans',{
     validator:{
         $jsonSchema:{
             bsonType:"object",
-            required:["fecha_inicio","fecha_entrega","estado","cedulaUser","codigoProducto"],
+            required:["fecha_inicio","fecha_entrega","cedulaUser","codigoProducto"],
             properties:{
                 fecha_inicio:{bsonType:"date",description:"fecha_inicio debe ser tipo date y es requerido"},
                 fecha_entrega:{bsonType:"date", description:"fecha_entrega debe ser de tipo date y es requerido"},

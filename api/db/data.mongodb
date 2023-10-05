@@ -140,7 +140,7 @@ db.booking.insertMany([
     {
         fecha_recogida: new Date('2023-10-25'),
         fecha_entrega_solicitada: new Date('2023-11-27'),
-        estado:"confirmado",
+        estado:"pendiente",
         codigoProducto:"l123",
         cedulaUser:"333",
         comentarios:"el usuario puede recoger el prestamo"

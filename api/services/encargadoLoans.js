@@ -1,10 +1,22 @@
-import { connectDB } from "../db/atlas";
+import { connectDB } from "../db/atlas.js";
+import { ObjectId } from "mongodb";
 
 //Post de loans(contratos prestamos)
 export const postLoans = async(value)=>{
     let db = await connectDB();
     let collection = db.collection('loans');
-    let data = await collection.inserOne(value);
+    let fechaInicio = new Date(value.fecha_inicio)
+    let fechaEntrega = new Date(value.fecha_entrega)
+    let loan ={...value,estado:"activo",fecha_inicio:fechaInicio,fecha_entrega:fechaEntrega}
+    let data = await collection.insertOne(loan);
+    return data
+}
+//Get todas las reservas pendientes
+export const getBookingActivos = async()=>{
+    let db = await connectDB();
+    let collection = db.collection('booking');
+    let data = await collection.find({estado:"pendiente"})
+    .toArray();
     return data
 }
 
@@ -74,4 +86,22 @@ export const getByCc = async(cedula)=>{
         }
     ]).toArray();
     return data;
+}
+
+//Eliminar reservas
+export const deleteBooking = async(value)=>{
+    console.log(value);
+    const db = await connectDB();
+    const collection = db.collection('booking');
+    const data = await collection.deleteOne({_id: new ObjectId(value)})
+    return data
+}
+
+//Actualizar Reservas
+export const updateBooking = async(value)=>{
+    console.log(value.estado);
+    const db = await connectDB();
+    const collection = db.collection('booking');
+    let data = await collection.updateOne({_id:new ObjectId(value._id)},{$set:{estado:value.estado}})
+    return data
 }
