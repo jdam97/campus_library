@@ -46,7 +46,7 @@ export const createProduct = async(req,res)=>{
         })
     } catch (error) {
         res.status(500).json({
-            message:"Error al crear usuario",
+            message:"Error al crear producto",
             error:error.message
         })
     }

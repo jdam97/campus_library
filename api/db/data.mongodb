@@ -49,83 +49,77 @@ db.users.insertMany([
 use('db_campus_library');
 db.products.insertMany([
     {
-        nombre:"la divina comedia",
-        tipo:"libros",
-        codigoProducto:"l123",
-        estado:"disponible",
-        descripcion:"Es una obra humana que refleja el peregrinaje del ser humano en busca de “la Luz”, es el descubrimiento del hombre hacia Dios, con la ayuda de la razón (Virgilio) y de la fe (Beatriz)."
+        nombre: "La divina comedia",
+        tipo: "ficcion",
+        codigoProducto: "l123",
+        estado: "disponible",
+        descripcion: "Es una obra humana que refleja el peregrinaje del ser humano en busca de “la Luz”, es el descubrimiento del hombre hacia Dios, con la ayuda de la razón (Virgilio) y de la fe (Beatriz)."
     },
     {
         nombre: "Don Quijote de la Mancha",
-        tipo: "libros",
+        tipo: "aventura",
         codigoProducto: "l124",
         estado: "disponible",
         descripcion: "La obra maestra de Miguel de Cervantes Saavedra narra las aventuras de Don Quijote, un caballero que enloquece por la lectura excesiva de libros de caballerías y se convierte en un caballero andante."
     },
     { 
         nombre: "Cien años de soledad",
-        tipo: "libros",
+        tipo: "ficcion",
         codigoProducto: "l125",
         estado: "disponible",
         descripcion: "Esta obra maestra de Gabriel García Márquez narra la historia de la familia Buendía a lo largo de varias generaciones en el ficticio pueblo de Macondo."
     },
     {
         nombre: "Matar a un ruiseñor",
-        tipo: "libros",
-        codigoProducto: "l126",
-        estado: "disponible",
-        descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930."
-    },
-    {
-        nombre: "Matar a un ruiseñor",
-        tipo: "libros",
+        tipo: "ficcion",
         codigoProducto: "l126",
         estado: "disponible",
         descripcion: "Escrito por Harper Lee, esta novela es un clásico de la literatura estadounidense. Narra la historia de Scout Finch, una niña que crece en el sur de Estados Unidos durante la década de 1930."
     },
     {
         nombre: "1984",
-        tipo: "libros",
+        tipo: "ficcion",
         codigoProducto: "l127",
         estado: "disponible",
         descripcion: "George Orwell escribió esta distopía en la que se describe un mundo totalitario en el que el gobierno controla todos los aspectos de la vida de las personas."
     },
     {
         nombre: "Orgullo y prejuicio",
-        tipo: "libros",
+        tipo: "romance",
         codigoProducto: "l128",
         estado: "disponible",
         descripcion: "Esta obra de Jane Austen es una comedia romántica que sigue la historia de Elizabeth Bennet y su relación con el apuesto pero orgulloso señor Darcy."
     },
     {
         nombre: "El Gran Gatsby",
-        tipo: "libros",
+        tipo: "ficcion",
         codigoProducto: "l129",
         estado: "disponible",
         descripcion: "Escrita por F. Scott Fitzgerald, esta novela ambientada en la década de 1920 en Estados Unidos sigue la vida de Jay Gatsby y su obsesión por recuperar a su amor de juventud, Daisy Buchanan."
     },
     {
         nombre: "Moby Dick",
-        tipo: "libros",
+        tipo: "aventura",
         codigoProducto: "l130",
         estado: "disponible",
         descripcion: "Escrito por Herman Melville, este clásico narra la obsesiva búsqueda del capitán Ahab por vengarse de Moby Dick, una gran ballena blanca que le arrancó una pierna."
     },
     {
         nombre: "La Odisea",
-        tipo: "libros",
+        tipo: "aventura",
         codigoProducto: "l135",
         estado: "disponible",
         descripcion: "Es un poema épico atribuido a Homero que relata las aventuras de Odiseo mientras intenta regresar a Ítaca después de la guerra de Troya. Es un clásico de la literatura griega."
     },
     {
         nombre: "La metamorfosis",
-        tipo: "libros",
+        tipo: "ficcion",
         codigoProducto: "l137",
         estado: "disponible",
         descripcion: "Franz Kafka escribió esta obra en la que el protagonista, Gregorio Samsa, se despierta transformado en un insecto. La novela explora temas de alienación y deshumanización."
     } 
 ])
+
 
 use('db_campus_library');
 db.booking.insertMany([

@@ -28,10 +28,10 @@ db.createCollection('products',{
     validator:{
         $jsonSchema:{
             bsonType:"object",
-            required:["nombre","tipo","codigoProducto","estado","descripcion"],
+            required:["nombre","tipo","codigoProducto","estado"],
             properties:{
                 nombre:{bsonType:"string",description:"nombre debe ser string y es requerido"},
-                tipo:{bsonType:"string",enum:["libros","audifonos","equipo"]},
+                tipo:{bsonType:"string",enum:["terror","accion","ficcion","aventura","romance"]},
                 codigoProducto:{bsonType:"string",description:"codigoProducto debe ser string y es requerido"},
                 estado:{bsonType:"string",enum:["disponible","mantenimiento","desabilitado"]},
                 descripcion:{bsonType:"string",description:"descripcion debe ser string y es requerido"},

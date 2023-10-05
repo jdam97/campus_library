@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import {useLocation,Link} from "react-router-dom"
 import { Header } from "../Header";
+import { Product } from "../addProducts";
 import "../../css/staff.css"
 import { Loading } from "../Loader";
 
@@ -9,6 +10,7 @@ const location = useLocation();
 let user = location.state.user
 const [data,setData]= useState([]);
 const [isLoading, setIsLoading] = useState(false);
+const [createProducts, setCreateProducts] = useState(false);
 let token = localStorage.getItem('token')
 
 useEffect(()=>{
@@ -80,7 +82,9 @@ const buttonAceptar = async(item)=>{
       }
     }
 const buttonDenegar = async(item)=>{
-    await(await fetch(`http://127.0.0.1:5047/v1/staff/loans`,{
+    setIsLoading(true); 
+    try {
+        await(await fetch(`http://127.0.0.1:5047/v1/staff/loans`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",
@@ -92,12 +96,28 @@ const buttonDenegar = async(item)=>{
             })
         })).json()
         window.location.reload()
+    } catch (error) {
+        console.error(error);
+    }finally {
+        setIsLoading(false);
+      } 
 }
+const activeButton = ()=>{
+    setCreateProducts(true)
+  }
 
 return(
     <div>
         <Header user={user} />
-        <div className="contenedor-users"> 
+        <div className="contenedor-users">
+        {!createProducts ? (
+                <div className="contenedor-add">
+                <div className="contenedor-button">
+                  <button className="Btn" onClick={activeButton}>
+                    <div className="sign">+</div>
+                    <div className="text">Create</div>
+                  </button>
+                </div>
                 <div className="contenedor-table">
                 {isLoading ? (
                 <Loading/> // Elemento de carga
@@ -125,10 +145,12 @@ return(
                         </tr>
                         ))}
                     </tbody>
-                </table>
-                )}
-                </div> 
+                </table>)}
+                </div>
+                </div>
+            ):(<Product setCreateProducts={setCreateProducts} />) }
             </div>
+
 
     </div>
 )    
