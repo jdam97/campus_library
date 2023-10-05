@@ -50,9 +50,16 @@ const ModalUsers = ({ isOpen, setIsOpen,codigoProductoSeleccionado,user})=>{
         <form className='form'
         onSubmit={reserva}>{/*onSubmit: seria un evento de tipo submit*/}
       <p className='title'>Reservar</p>
-          <input className='words input' value={fecha_recogida} onChange={(e)=>setFecha_recogida(e.target.value)} type="date" placeholder='Fecha Inicio' required/>
-          <input className='words input' value={fecha_entrega_solicitada} onChange={(e)=>setFecha_entrega_solicitada(e.target.value)} type="date" placeholder='Fecha Entrega' required/>
-          <button className='btn' type='submit'>Enviar</button>
+        <div className='date-input'>
+            <label htmlFor="fecha_inicio">Fecha Inicio Reserva:</label>
+            <input className='words input' value={fecha_recogida} onChange={(e)=>setFecha_recogida(e.target.value)} type="date" placeholder='Fecha Inicio' required/>
+        </div> 
+        <div className='date-input'> 
+            <label htmlFor="fecha_entrega">Fecha Entrega Reserva:</label>
+            <input className='words input' value={fecha_entrega_solicitada} onChange={(e)=>setFecha_entrega_solicitada(e.target.value)} type="date" placeholder='Fecha Entrega' required/>
+        </div>
+          <button className='btn' type='submit'>Reservar</button>
+       
       </form> 
         <button className="close-button" onClick={()=>setIsOpen(false)}>Close</button>
         </Modal>

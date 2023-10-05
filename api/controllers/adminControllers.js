@@ -39,12 +39,12 @@ export const getAllStaff = async(req,res)=>{
         let data = await loginStaff.getAllStaff()
         res.status(200).json({
             status:200,
-            data: data[0],
+            data: data,
             message: "Nice!"
         })
         
     } catch (error) {
-        res.satus(500).json({
+        res.status(500).json({
             message:"Error al listar staff",
             error:error.message
         })

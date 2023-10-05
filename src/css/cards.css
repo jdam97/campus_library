@@ -44,7 +44,7 @@ html{
     overflow: hidden;
     transition-duration: .3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-    background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+    background: linear-gradient(144deg, #001f3f, #003366, #112288, #000044);
     margin: 0 auto;
   }
   
@@ -94,10 +94,10 @@ html{
 
 /* cards */
 .card {
+  min-width: 180px;
     box-sizing: border-box;
-    width: 190px;
     height: 254px;
-    background: rgba(217, 217, 217, 0.58);
+    background: linear-gradient(to right, #000, #333);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
@@ -110,11 +110,27 @@ html{
     justify-content: center;
     user-select: none;
     font-weight: bolder;
-    color: black;
+    color: wheat;
+  }
+
+  .card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    padding: 1rem;
+  }
+
+  .card-info img{
+    height: 80px;
+    border-radius: 6rem;
+  }
+  .card-info h3{
+    margin-top: .2rem;
   }
   
   .card:hover {
-    border: 1px solid black;
+    border: 1px solid wheat;
     transform: scale(1.05);
   }
   

@@ -5,6 +5,7 @@ import {AdminLogin} from "../SignUpAdmin"
 import 'animate.css';
 import "../../css/signUp.css"
 import "../../css/cards.css"
+import logoCards from "../../assets/chopper.png"
 
 export const Admin = ()=>{
     const location = useLocation();
@@ -26,6 +27,7 @@ export const Admin = ()=>{
         if(data.status ==200){
           setMostrarcontenido(true)
           console.log(data);
+          setData(data.data)
         }
         else{
           console.log(data.message)
@@ -53,12 +55,20 @@ export const Admin = ()=>{
                     </button>
                   </div>
                   <div className="contenedorCards">
-                    <div className="card">Click me</div>
-                    <div className="card">Click me</div>
-                    <div className="card">Click me</div>
-                    <div className="card">Click me</div>
-                    <div className="card">Click me</div>
-                    <div className="card">Click me</div>
+
+                  {data.map((item, index)=>(
+                      <div key={index} className="card">
+                      <div className="card-info">
+                        <img src= {logoCards} alt="" />
+                        <h3><b>Nombre:</b> {item.nombre}</h3>
+                        <p><b> Apellido:</b> {item.apellido}</p>
+                        <p><b>Cedula:</b> {item.cedula}</p>
+                        <p><b>Email:</b><br/>{item.email}</p>
+                        <p><b>Rol:</b> {item.rol}</p>
+                      </div>
+                    </div>
+                    ))}
+                    
                   </div>
                 </div>
                 
